@@ -1,3 +1,10 @@
+/* README.md
+margin: distance between element and other element's borders
+padding: distance between element and its own border
+width: width of the element */
+
+
+/* DON'T TOUCH ANYTHING IN THE BODY */
 body {
   display: flex;
   justify-content: center;
@@ -7,11 +14,10 @@ body {
   background-color: #f8fafc;
   font-family: Arial, sans-serif;
 }
+/* -------------------------------- */
 
 .container {
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   text-align: center;
   width: 250px;
@@ -27,9 +33,11 @@ button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s;
+}
+
+/* if have time */
+#increment {
+  background-color:green
 }
 
 button:hover {
