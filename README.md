@@ -11,7 +11,7 @@ git clone git@github.com:CSES-Open-Source/cohorts-week-2-frontend.git
 ## Node.js and npm
 ---
 
-## Step 0: Install Node.js (Required for Vite)
+## Install Node.js (Required for Vite)
 
 Before starting, make sure you have **Node.js v18+** installed.
 You can check by running:
