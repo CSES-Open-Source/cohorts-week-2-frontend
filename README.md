@@ -6,7 +6,91 @@ First, clone the project from Github:
 git clone git@github.com:CSES-Open-Source/cohorts-week-2-frontend.git
 ```
 
+# PREQUISITES
+
+## Node.js and npm
+Here’s a **tutorial-style version** of the Node installation section — written to fit naturally into your Vite conversion README, with simple step-by-step formatting and examples for both **macOS** and **Windows**.
+
 ---
+
+## Step 0: Install Node.js (Required for Vite)
+
+Before starting, make sure you have **Node.js v18+** installed.
+You can check by running:
+
+```bash
+node -v
+```
+
+If you see something like `v20.11.1`, you’re ready to continue.
+If not, follow the steps below based on your operating system.
+
+---
+
+### macOS Example.
+
+1. **Install Node with Homebrew (recommended)**
+
+   ```bash
+   brew install node
+   ```
+
+2. **Verify installation**
+
+   ```bash
+   node -v
+   npm -v
+   ```
+
+   You should now see version numbers for both Node and npm.
+
+3. **(Alternative)**
+   If you don’t use Homebrew, you can also download Node directly:
+
+   * Go to [https://nodejs.org](https://nodejs.org)
+   * Choose **LTS** → macOS Installer (`.pkg`)
+   * Follow the on-screen setup wizard
+
+---
+
+### Windows Example
+
+1. **Install Node using the official installer**
+
+   * Visit [https://nodejs.org](https://nodejs.org)
+   * Download the **LTS** version (`.msi` file)
+   * Run the installer
+   * Keep the default options checked — especially **“Add to PATH”**
+
+2. **Verify installation**
+   Open a new Command Prompt and run:
+
+   ```bash
+   node -v
+   npm -v
+   ```
+
+   You should see version numbers appear.
+
+3. **(Optional for advanced users)**
+   You can also install via [Chocolatey](https://chocolatey.org/install):
+
+   ```bash
+   choco install nodejs-lts
+   ```
+
+---
+
+# PART 1: HTML/CSS/JS
+---
+## SETUP
+### TODO 1: Create Project Folder
+Create a new folder with your name under the root github directory. You can do this manually or by running the following command in your terminal:
+
+``` 
+user@user MINGW64 ~/path/to/github/root (main) 
+$ mkdir your-name
+```
 
 ## HTML
 
@@ -365,4 +449,190 @@ resetBtn.addEventListener("click", () => {
   updateDisplay();
 });
 ```
+---
+
+# PART 2: VITE + REACT
+---
+## SETUP
+### TODO 1: Create Vite Project
+Navigate to the folder you created earlier with your name. Then run the following command in your terminal:
+
+```
+npm create vite@latest part2 -- --template react-ts
+```
+This will create a new Vite project with React and TypeScript in a folder named `part2`.
+
+Move into the folder and install dependencies:
+```
+cd part2
+npm install
+```
+
+You should now see a structure like this:
+```
+part2/
+├─ index.html
+├─ package.json
+├─ tsconfig.json
+├─ vite.config.ts
+└─ src/
+   ├─ App.css
+   ├─ App.tsx
+   ├─ index.css
+   └─ main.tsx
+```
+---
+### TODO 2: Replace Default Files
+This might be overwhelming at first, but don't worry! We'll guide you through replacing the default files so that it's more manageable.
+
+We’ll now copy over your prepared files from
+root/template/part2/ into the new Vite project.
+
+Make sure you’re still inside root/your-name/part2/, then run:
+```
+cp ../../template/part2/App.tsx src/
+cp ../../template/part2/App.css src/
+cp ../../template/part2/index.css src/
+```
+---
+### TODO 3: Start Development Server
+Now, start the Vite development server by running:
+```
+npm run dev
+```
+
+You should see something like:
+```
+VITE v5.x  ready in 300ms
+
+  ➜  Local:   http://localhost:5173/
+```
+
+Open the link in your browser — you’ll see your migrated app running.
+---
+## REACT
+Got it — here’s your cleaned-up **Part 2** section starting directly from copying the main class (skipping setup and file replacement).
+The structure matches your README style exactly and continues the same `### TODO #` format seamlessly.
+
+---
+
+# PART 2: VITE + REACT
+
+---
+
+### TODO 1: Copy Your Main Class from Part 1
+
+Open `src/App.tsx`. You’ll see a file with several TODO comments.
+
+Replace the empty `return()` block with the HTML structure from **Part 1**.
+
+Make sure to:
+
+* Paste everything inside the `<>` and `</>` fragment tags
+* Replace `class` with `className` (React uses `className` for CSS)
+
+```tsx
+<>
+  <main className="container">
+    <h1>Counter App</h1>
+    <p id="count">0</p>
+    <div className="buttons">
+      <button id="decrement">-</button>
+      <button id="reset">Reset</button>
+      <button id="increment">+</button>
+    </div>
+  </main>
+</>
+```
+
+At this point, your app should look like the same static counter page from Part 1 — but it won’t respond to clicks yet.
+
+---
+
+### TODO 2: Import `useState` from React
+
+At the top of `App.tsx`, import the React hook that lets you store and update variables.
+
+```tsx
+import { useState } from "react";
+import "./App.css";
+```
+
+**Explanation:**
+
+* `useState` allows your React component to “remember” values between renders.
+* When the value changes, React automatically updates what’s displayed on the screen.
+
+---
+
+### TODO 3: Add `count` and `setCount` Variable Using `useState`
+
+Inside the `App()` function, right under the opening brace, add this line:
+
+```tsx
+const [count, setCount] = useState(0);
+```
+
+**Explanation:**
+
+* `count` → the current number on screen.
+* `setCount()` → the function that updates it.
+* `useState(0)` sets the initial value to 0.
+
+---
+
+### TODO 4: Display the Count Dynamically
+
+Change the static `0` inside your `<p>` tag to `{count}` so React can display the live value.
+
+```tsx
+<p id="count">{count}</p>
+```
+
+**Explanation:**
+
+* The curly braces let you embed JavaScript values inside HTML-like JSX.
+* Whenever `setCount()` is called, React re-renders and shows the new value automatically.
+
+---
+
+### TODO 5: Add onClick Tag to Increment
+
+Make the **“+”** button increase the count each time it’s clicked.
+
+```tsx
+<button id="increment" onClick={() => setCount(count + 1)}>+</button>
+```
+
+**Explanation:**
+
+* `onClick` runs the function whenever the button is clicked.
+* `setCount(count + 1)` tells React to increase the counter by 1 and re-render.
+
+---
+
+### TODO 6: Add onClick Tag to Reset
+
+Make the **Reset** button set the counter back to 0.
+
+```tsx
+<button id="reset" onClick={() => setCount(0)}>Reset</button>
+```
+
+---
+
+### TODO 7: Add onClick Tag to Decrement
+
+Make the **“−”** button decrease the count each time it’s clicked.
+
+```tsx
+<button id="decrement" onClick={() => setCount(count - 1)}>-</button>
+```
+
+---
+
+# CONGRATS!
+You’ve successfully converted your Counter App to use Vite and React!
+
+
 
