@@ -12,14 +12,11 @@ function updateDisplay() {
   countDisplay.textContent = count;
 }
 
-// TODO 11: Add click event to increment button
+// TODO 12: Add click event to increment button
 incrementBtn.addEventListener("click", () => {});
 
-// TODO 12: Add click event to decrement button
+// TODO 13: Add click event to decrement button
 decrementBtn.addEventListener("click", () => {});
 
-// Click event to reset button
-resetBtn.addEventListener("click", () => {
-  count = 0;
-  updateDisplay();
-});
+// TODO 14: add click event to reset button
+resetBtn.addEventListener("click", () => {});
