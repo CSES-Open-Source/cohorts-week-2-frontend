@@ -1,4 +1,4 @@
-# Counter App
+# Cohorts Week 2 : Frontend Basics (Counter App)
 
 First, clone the project from Github:
 
@@ -156,20 +156,19 @@ CSS uses different units to measure size and space:
 
 ```
 
-┌─────────── MARGIN (space outside) ────────────┐
-│                                               │
-│  ┌─────── PADDING (space inside) ─────────-┐  │
-│  │                                         │  │
-│  │  ┌────────────────────────┐             │  │
-│  │  │                        │             │  │
-│  │  │      CONTENT           │             │  │
-│  │  │      (text/images)     │             │  │
-│  │  │                        │             │  │
-│  │  └────────────────────────┘             │  │
-│  │                                         │  │
-│  └─────────────────────────────────────────┘  │
-│                                               │
-└───────────────────────────────────────────────┘
++---------------------------------------+
+|             MARGIN                    |
+|  +---------------------------------+  |
+|  |           BORDER                |  |
+|  |  +---------------------------+  |  |
+|  |  |        PADDING            |  |  |
+|  |  |   +-------------------+   |  |  |
+|  |  |   |     CONTENT       |   |  |  |
+|  |  |   +-------------------+   |  |  |
+|  |  +---------------------------+  |  |
+|  +---------------------------------+  |
++---------------------------------------+
+
 
 ```
 
@@ -286,28 +285,6 @@ button:hover {
 
 JavaScript makes your page **interactive**: responds to clicks and updates content.
 
-### Get Elements
-
-```javascript
-const countDisplay = document.getElementById("count");
-const incrementBtn = document.getElementById("increment");
-const decrementBtn = document.getElementById("decrement");
-const resetBtn = document.getElementById("reset");
-```
-
-- `document.getElementById("count")` → Finds `<p id="count">` in HTML
-- `const` = constant variable (cannot be reassigned)
-
-```javascript
-function updateDisplay() {
-  countDisplay.textContent = count;
-}
-```
-
-- textContent is a property on DOM elements that gets/sets the element's text
-  (in this case , it is document.getElementById('count'))
-- It treats the value as plain text
-
 ### TODO 10: Add Script Tag
 
 ```html
@@ -319,8 +296,41 @@ function updateDisplay() {
 This loads your JavaScript file to make buttons work.
 
 ---
+### TODO 11: Get Elements
 
-### TODO 11: Increment Button
+```javascript
+const countDisplay = document.getElementById("count");
+```
+
+- `document.getElementById("count")` → Finds `<p id="count">` in HTML
+- `const` = constant variable (cannot be reassigned)
+
+```javascript
+function updateDisplay() {
+  countDisplay.textContent = count;
+}
+```
+- textContent is a property on DOM elements that gets/sets the element's text
+  (in this case , it is document.getElementById('count'))
+- It treats the value as plain text
+
+```javascript
+const incrementBtn = document.getElementById("INSERT CORRECT ID HERE");
+```
+- Similar to the above example, find the id for the increment button in index.html
+
+```javascript
+const decrementBtn =  // INSERT CORRECT FUNCTION HERE
+```
+- Moving a step further, create the function line to get the decrement button's id
+
+```javascript
+// CREATE A NEW resetBtn const here
+```
+- Now for the final step, create a whole new const for the reset button, similar to above
+
+---
+### TODO 12: Increment Button
 
 ```javascript
 incrementBtn.addEventListener("click", () => {
@@ -334,7 +344,7 @@ incrementBtn.addEventListener("click", () => {
 
 ---
 
-### TODO 12: Decrement Button
+### TODO 13: Decrement Button
 
 ```javascript
 decrementBtn.addEventListener("click", () => {
@@ -344,3 +354,15 @@ decrementBtn.addEventListener("click", () => {
 ```
 
 - `count--` → Decrease by 1 (shorthand for `count = count - 1`)
+
+---
+
+### TODO 14: Reset Button
+
+```javascript
+resetBtn.addEventListener("click", () => {
+  count = 0;
+  updateDisplay();
+});
+```
+
