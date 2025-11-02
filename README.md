@@ -89,7 +89,16 @@ Create a new folder with your name under the root github directory. You can do t
 user@user MINGW64 ~/path/to/github/root (main) 
 $ mkdir your-name
 ```
+---
+### TODO 2: Create Part 1 Folder
+Create a new folder labeled "part1" under the folder you previous created. You can do this manually or by running the following command in your terminal:
 
+``` 
+user@user MINGW64 ~/path/to/github/root/your-name (main) 
+$ mkdir part1
+```
+
+---
 ## HTML
 
 HTML creates the **structure** of your webpage, which is the skeleton.
