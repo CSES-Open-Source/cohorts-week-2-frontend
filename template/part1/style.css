@@ -16,7 +16,7 @@ body {
 }
 /* -------------------------------- */
 
-/* TODO 1: Style the container */
+/* TODO 7: Style the container */
 /* Add these properties:
    - background: white
    - padding: 2rem
@@ -27,14 +27,14 @@ body {
   
 }
 
-/* TODO 2: Style the count display */
+/* TODO 8: Style the count display */
 /* Add: margin: 1rem 0 */
 #count {
   font-size: 3rem;
   
 }
 
-/* TODO 3: Style the buttons */
+/* TODO 9: Style the buttons */
 /* Add these properties:
    - margin: 0.5rem
    - padding: 0.5rem 1rem
@@ -45,13 +45,13 @@ button {
   
 }
 
-/* BONUS TODO 4 (if you have time): Make increment button green */
+/* BONUS TODO 1(if you have time): Make increment button green */
 /* Add: background-color: green */
 #increment {
   
 }
 
-/* BONUS TODO 5 (if you have time): Add hover effect to buttons */
+/* BONUS TODO 2(if you have time): Add hover effect to buttons */
 /* Add: background: #e2e8f0 */
 button:hover {
   

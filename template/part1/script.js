@@ -1,31 +1,29 @@
-// TODO 1: Get all elements by their id
-// Use: document.getElementById("id-name")
-const countDisplay = /* Get element with id="count" */;
-const incrementBtn = /* Get element with id="increment" */;
-const decrementBtn = /* Get element with id="decrement" */;
-const resetBtn = /* Get element with id="reset" */;
+// TODO 10: add this script to index.html
 
-// TODO 2: Create a count variable starting at 0
+
+const countDisplay = document.getElementById("count");
+const incrementBtn = document.getElementById("increment");
+const decrementBtn = document.getElementById("decrement");
+const resetBtn = document.getElementById("reset");
+
 let count = 0;
 
 function updateDisplay() {
   countDisplay.textContent = count;
 }
 
-// TODO 3: Add click event to increment button
-// Inside: count++; then updateDisplay();
+// TODO 11: Add click event to increment button
 incrementBtn.addEventListener("click", () => {
   
 });
 
-// TODO 4: Add click event to decrement button
-// Inside: count--; then updateDisplay();
+// TODO 12: Add click event to decrement button
 decrementBtn.addEventListener("click", () => {
   
 });
 
-// TODO : Add click event to reset button
-// Inside: count = 0; then updateDisplay();
+// Click event to reset button
 resetBtn.addEventListener("click", () => {
-  
+  count = 0;
+  updateDisplay();
 });
