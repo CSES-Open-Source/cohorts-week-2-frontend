@@ -9,8 +9,6 @@ git clone git@github.com:CSES-Open-Source/cohorts-week-2-frontend.git
 # PREQUISITES
 
 ## Node.js and npm
-Here’s a **tutorial-style version** of the Node installation section — written to fit naturally into your Vite conversion README, with simple step-by-step formatting and examples for both **macOS** and **Windows**.
-
 ---
 
 ## Step 0: Install Node.js (Required for Vite)
