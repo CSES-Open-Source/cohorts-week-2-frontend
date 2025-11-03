@@ -9,11 +9,9 @@ git clone git@github.com:CSES-Open-Source/cohorts-week-2-frontend.git
 # PREQUISITES
 
 ## Node.js and npm
-Here’s a **tutorial-style version** of the Node installation section — written to fit naturally into your Vite conversion README, with simple step-by-step formatting and examples for both **macOS** and **Windows**.
-
 ---
 
-## Step 0: Install Node.js (Required for Vite)
+## Install Node.js (Required for Vite)
 
 Before starting, make sure you have **Node.js v18+** installed.
 You can check by running:
@@ -91,7 +89,16 @@ Create a new folder with your name under the root github directory. You can do t
 user@user MINGW64 ~/path/to/github/root (main) 
 $ mkdir your-name
 ```
+---
+### TODO 2: Create Part 1 Folder
+Create a new folder labeled "part1" under the folder you previous created. You can do this manually or by running the following command in your terminal:
 
+``` 
+user@user MINGW64 ~/path/to/github/root/your-name (main) 
+$ mkdir part1
+```
+
+---
 ## HTML
 
 HTML creates the **structure** of your webpage, which is the skeleton.
